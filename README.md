@@ -9,4 +9,4 @@
 
 （4）为了解决新加入的物体不能实时显示正确的渲染颜色的问题，创建scenecontroller脚本，并将此组件添加到场景中，并且将synth拾取main camera。
 
-![](../ImageSynthesisLearning/ImageSynthPart1/Recordings/alignwithview.png)
+![](/ImageSynthPart1/Recordings/alignwithview.png)
