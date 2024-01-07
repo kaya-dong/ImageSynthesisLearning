@@ -25,6 +25,15 @@
 
 - 设置为每帧都创建新对象
 
-- 由于销毁速度小于创建速度，导致内存不断增加(Window-Analysis-Profiler)，因此引入对象池
+- 由于销毁速度小于创建速度，导致内存不断增加(Window-Analysis-Profiler)
 
 ![内存问题](ImageSynthPart1/Recordings/memoryproblem.png)
+
+- 引入对象池解决内存问题：
+
+![内存问题](ImageSynthPart1/Recordings/minmemory.png)
+
+- 设置生成速度（按照达到一定帧数重新生成的规则控制速度
+- 修改*ImageSynthesis.cs*中的`Save`方法，筛选我们要的img和layer两种格式的图像信息
+
+##### 三、设置训练集和验证集

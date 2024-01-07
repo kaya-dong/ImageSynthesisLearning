@@ -9,6 +9,9 @@ public class SceneController : MonoBehaviour
 
     public int minObjects = 10;
     public int maxObjects = 50;
+    public int trainingImages;
+    public int valImages;
+
     //private GameObject[] created;
     private int frameCount = 0;
     private ShapePool pool;
@@ -22,13 +25,24 @@ public class SceneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (frameCount % 30 == 0){
-        GenerateRandom();
-        
+        if(frameCount < trainingImages + valImages){
+            if (frameCount % 30 == 0){
+            GenerateRandom(); 
+            Debug.Log($"FrameCount:{frameCount}");
+            }
+            if(frameCount<trainingImages){
+                string filename = $"image_{frameCount.ToString().PadLeft(5,'0')}";
+                synth.Save(filename,512,512,"Captures/train", 2);
+            }else if(frameCount < trainingImages + valImages){
+                int valFrameCount = frameCount - trainingImages;
+
+                string filename = $"image_{valFrameCount.ToString().PadLeft(5,'0')}";
+                synth.Save(filename,512,512,"Captures/val", 2);
+            }
+            frameCount++;
         }
-        frameCount++;
-        string filename = $"image_{frameCount.ToString().PadLeft(5,'0')}";
-        synth.Save(filename,512,512,"Captures", 2);
+
+        
     }
 
     void GenerateRandom()
@@ -44,7 +58,6 @@ public class SceneController : MonoBehaviour
             //选择一个prefab
             int prefabIndex = Random.Range(0,prefabs.Length);
             var prefab = prefabs[prefabIndex];
-        
 
             //设置位置
             float newX, newY, newZ;
