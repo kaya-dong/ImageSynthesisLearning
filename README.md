@@ -11,7 +11,7 @@
 
 （4）为了解决新加入的物体不能实时显示正确的渲染颜色的问题，创建scenecontroller脚本，并将此组件添加到场景中，并且将synth拾取main camera
 
-![设置对齐方式](../ImageSynthesisLearning/ImageSynthPart1/Recordings/alignwithview.png)
+![设置对齐方式](/ImageSynthesisLearning/ImageSynthPart1/Recordings/alignwithview.png)
 
 （5）设置相机的分辨率为512*512。
 
@@ -26,3 +26,5 @@
 - 设置为每帧都创建新对象
 
 - 由于销毁速度小于创建速度，导致内存不断增加(Window-Analysis-Profiler)，因此引入对象池
+
+![内存问题](/ImageSynthesisLearning/ImageSynthPart1/Recordings/memoryproblem.png)
