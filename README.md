@@ -26,5 +26,3 @@
 - 设置为每帧都创建新对象
 
 - 由于销毁速度小于创建速度，导致内存不断增加(Window-Analysis-Profiler)，因此引入对象池
-
-  ![内存问题](../ImageSynthesisLearning/ImageSynthPart1/Recordings/memoryproblem.png)
