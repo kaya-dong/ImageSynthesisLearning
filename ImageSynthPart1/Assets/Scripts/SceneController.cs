@@ -8,7 +8,7 @@ public class SceneController : MonoBehaviour
     public GameObject[] prefabs;
 
     public int minObjects = 10;
-    public int maxObjects = 50;
+    public int maxObjects = 20;
     public int trainingImages;
     public int valImages;
 

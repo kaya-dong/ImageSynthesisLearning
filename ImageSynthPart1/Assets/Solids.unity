@@ -157,7 +157,10 @@ MonoBehaviour:
   - {fileID: 4095191201041651185, guid: 9f1a87e32e4027b43b31f7c11eaea227, type: 3}
   - {fileID: 7286140637791165612, guid: 13b5e44b87d5c694cb8046337812656f, type: 3}
   - {fileID: 2208936931990783079, guid: 87e7a8e3ea1dbd849805db9e81919896, type: 3}
-  maxObjects: 10
+  minObjects: 10
+  maxObjects: 50
+  trainingImages: 200
+  valImages: 100
 --- !u!4 &653816950
 Transform:
   m_ObjectHideFlags: 0

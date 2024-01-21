@@ -1,0 +1,10 @@
+data/obj_train_data/image_00007_layer.png
+data/obj_train_data/image_00039_layer.png
+data/obj_train_data/image_00065_layer.png
+data/obj_train_data/image_00085_layer.png
+data/obj_train_data/image_00091_layer.png
+data/obj_train_data/image_00098_layer.png
+data/obj_train_data/image_00125_layer.png
+data/obj_train_data/image_00143_layer.png
+data/obj_train_data/image_00167_layer.png
+data/obj_train_data/image_00176_layer.png
